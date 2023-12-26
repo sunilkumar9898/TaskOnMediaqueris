@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif", serif;
+}
+
+/* 
+
+@keyframes effect { 
+  0% { 
+      background: linear-gradient(153deg,#008000, #00FF00); 
+  } 
+
+  50% { 
+      background: linear-gradient(135deg, #220080, #0084ff); 
+  } 
+
+  100% { 
+      background: linear-gradient(135deg,#e78f3c, #ff4800); 
+  } 
+}  */
+
+body {
+  animation: effect 3s linear infinite;
+  background: linear-gradient(135deg,#e78f3cb2, #ff4800cc); 
+}
+.container {
+  width: 100%;
+}
+
+.Sub_container {
+  width: 98%;
+  padding: 20px;
+  /* background: linear-gradient(135deg, rgb(252, 0, 0), hotpink); */
+  margin: auto;
+  margin-top: 10px;
+}
+
+.image_box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.image_box div {
+  text-align: center;
+  background-color: rgb(239, 237, 237);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.241);
+  padding: 20px 0px;
+  border-radius: 8px;
+}
+.image_box img {
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  transition: transform 0.7s ease-in-out;
+}
+
+.image_box img:hover {
+  /* -webkit-filter: sepia(100%);
+	filter: sepia(100%);
+	-webkit-transition: .3s ease-in-out; */
+  cursor: pointer;
+  transform: scale(1.1) ;
+	/* opacity: 0.3; */
+}
+p {
+  padding: 10px;
+}
+.content {
+  margin: 10px 0px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.content .Sub_content {
+  background-color: rgb(239, 237, 237);
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.241);
+  padding: 20px 0px;
+  border-radius: 8px;
+}
+
+.content div img {
+  width: 77%;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+textarea {
+  margin: 0px 20px;
+  width: 80%;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form_container {
+  width: 98%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 30px 0px;
+  background: linear-gradient(135deg, red, blue);
+}
+
+.student_details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+.student_details input {
+  margin: 30px 20px;
+  padding: 10px 10px;
+  font-size: 20px;
+  width: 90%;
+  outline: none;
+  border-radius: 8px;
+}
+
+.student_details select {
+  margin: 30px 20px;
+  padding: 10px 50px;
+  width: 90%;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.student_details button {
+  padding: 10px 70px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.student_details button:hover {
+  background-color: green;
+  border-radius: 10px;
+  color: black;
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+
+.student_img img {
+  box-shadow: 10px 10px 5pt 0.5pt #b9bfb1;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 420px) {
+  .image_box {
+    display: block;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 10px;
+  }
+  .image_box div {
+    padding: 20px 0px;
+    margin: 20px 10px;
+  }
+  .content {
+    /* margin: 40px 20px; */
+    margin-top: 30px;
+    display: block;
+    gap: 40px;
+  }
+
+  .content .Sub_content {
+    padding: 20px 0px;
+    margin: 20px 0px;
+  }
+
+  .student_details {
+    display: flex;
+    flex-flow: column-reverse;
+    text-align: center;
+  }
+
+  .student_img img {
+    width: 85%;
+    height: 80%;
+  }
+  .form_container {
+    margin-top: 30px;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
+  .image_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .image_box div {
+    padding: 20px 0px;
+    margin: 20px 10px;
+  }
+  .content {
+    margin: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .content .Sub_content {
+    padding: 40px;
+    margin: 20px 0px;
+  }
+
+  .student_img img {
+    width: 55%;
+  }
+
+  .student_img img {
+    width: 85%;
+    height: 80%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .image_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .image_box div {
+    padding: 20px 0px;
+    margin: 20px 10px;
+  }
+  .content {
+    margin: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .content .Sub_content {
+    padding: 20px 0px;
+    margin: 20px 0px;
+  }
+
+  .student_img img {
+    width: 85%;
+    height: 80%;
+  }
+}
+
+
+
+
